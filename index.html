@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Durga Puja Special International | Beyond Journey</title>
+    <title>Durga Puja Special | India Holiday Packages — Beyond Journey</title>
     <meta
       name="description"
-      content="Durga Puja International holiday specials — Malaysia, Dubai, Bali, Sri Lanka, Maldives & more. Curated itineraries, best price, 24x7 support from Beyond Journey."
+      content="Durga Puja & Diwali special holiday packages — Goa, Kerala, Shimla-Manali, Andaman, Nainital-Corbett, Manali (Volvo). Customizable itineraries, best price, 24x7 support."
     />
     <meta name="author" content="Beyond Journey" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,87 +24,123 @@
       rel="stylesheet"
     />
     <style>
-      :root {
+      :root{
         --brand:#f59e0b;
         --brand-dark:#d97706;
         --ink:#0f172a;
         --muted:#6b7280;
         --soft:#f1f5f9;
+        --accent:#22c55e;
       }
-      html,body {
+      html,body{
         font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif;
         color:var(--ink);
         background:#fff;
         scroll-behavior:smooth
       }
-      h1,h2,h3,h4,h5,h6 {
+      h1,h2,h3,h4,h5,h6{
         font-family:"Playfair Display",serif;
         font-weight:600;
       }
       .btn-brand{background:var(--brand);border-color:var(--brand);color:#fff}
       .btn-brand:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+      .text-brand{color:var(--brand)}
       .bg-soft{background:var(--soft)}
-      .navbar.sticky{position:sticky;top:0;z-index:1020;background:rgba(255,255,255,.95);border-bottom:1px solid #eef2f7}
-
-      /* Hero */
-      .hero {position: relative;min-height: 70vh;overflow: hidden;}
-      .hero .carousel-item img {object-fit: cover;height: 70vh;width: 100%;}
+      .shadow-soft{box-shadow:0 10px 30px rgba(2,8,20,0.06)}
+      .navbar.sticky{position:sticky;top:0;z-index:1020;background:rgba(255,255,255,.92);border-bottom:1px solid #eef2f7}
+      
+      /* Hero Overlay Fix */
+      .hero {position: relative;min-height: 75vh;overflow: hidden;}
+      .hero .carousel-item {min-height: 75vh;}
+      .hero .carousel-item img {object-fit: cover;height: 75vh;width: 100%;}
       .hero .overlay {position: absolute;top:0;left:0;right:0;bottom:0;background: rgba(0,0,0,0.40);z-index:1;}
-      .hero-content {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;color:#fff;width:90%;}
-      .hero-badge {display:inline-flex;gap:.5rem;align-items:center;background:rgba(255,255,255,.15);border-radius:999px;padding:.3rem .8rem;font-size:.85rem;font-weight:600;color:#fff;}
-      .hero-caption {color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.6);}
-   .hero-badge.teal {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  padding: .4rem 1rem;
-  border-radius: 999px;
-  font-size: .95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  color: #fff;
-  background: linear-gradient(135deg, #14b8a6, #0d9488);
-  box-shadow: 0 0 15px rgba(20, 184, 166, 0.6);
-  animation: fadeInDown 1s ease forwards;
+      .hero-content {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;text-align:left;color:#fff;}
+      .hero-badge {display:inline-flex;gap:.5rem;align-items:center;background:rgba(255,255,255,.15);border-radius:999px;padding:.4rem .9rem;font-weight:600;backdrop-filter:blur(6px);color:#fff;}
+      .hero-caption {color:#fff;text-shadow:0 6px 20px rgba(2,8,20,.5);}
+      .carousel-control-prev,.carousel-control-next{z-index:4;}
+      .hero-caption-strong {
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
-.hero-badge.teal i {
-  font-size: 1.1rem;
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
-      @media(max-width:768px){
-        .hero .carousel-item img{height:55vh;}
-        .hero-content h1{font-size:1.5rem;}
-        .hero-content p{font-size:.9rem;}
+      /* Glass enquiry form */
+      .inquiry-card{border:1px solid #e5e7eb;border-radius:1rem}
+      .inquiry-card.glass {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 1rem;
+        color: #fff;
       }
-
-      section{padding:60px 0}
+      .inquiry-card.glass .form-control,
+      .inquiry-card.glass .form-select {
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.4);
+      }
+      .inquiry-card.glass .form-control::placeholder {color: rgba(255,255,255,0.8);}
+      .inquiry-card.glass label {color:#fff;font-weight:600;}
+      .inquiry-card.glass .btn-brand {background:var(--brand);border-color:var(--brand);}
+      
+      section{padding:64px 0}
       @media(min-width:992px){section{padding:88px 0}}
       .section-title{font-weight:600;letter-spacing:-.01em}
       .section-lead{color:var(--muted)}
-      .package-card{border:1px solid #e5e7eb;border-radius:1.25rem;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;background:#fff}
+      .package-card{border:1px solid #e5e7eb;border-radius:1.25rem;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
       .package-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(2,8,20,.08)}
-      .package-img{aspect-ratio:16/10;object-fit:cover;width:100%}
+      .package-img{aspect-ratio:16/10;object-fit:cover}
+      .chip{display:inline-flex;align-items:center;gap:.35rem;background:#ecfeff;border-radius:999px;padding:.25rem .5rem;border:1px solid #bae6fd;color:#0369a1;font-weight:700}
+      .timeline{position:relative;margin-left:1rem}
+      .timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#e5e7eb}
+      .timeline-item{position:relative;padding-left:2.25rem;margin-bottom:1.25rem}
+      .timeline-item::before{content:"";position:absolute;left:2px;top:.25rem;width:16px;height:16px;border-radius:50%;background:var(--brand)}
+      .floating-cta{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:.75rem;z-index:1080}
+      .floating-cta a{display:flex;align-items:center;gap:.5rem;border-radius:999px;padding:.6rem .9rem;background:#111827;color:#fff;text-decoration:none}
+      .floating-cta a.whatsapp{background:#22c55e}
+      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:1070;background:rgba(255,255,255,.98);border-top:1px solid #e5e7eb}
+      .rating{color:#f59e0b}
+      .logo{height:36px}
+      .trusted-logos img{height:28px;opacity:.8}
+      footer{padding:32px 0;background:#fcfcfd;border-top:1px solid #eef2f7}
       .package-price{font-weight:800;letter-spacing:-.02em}
 
-      /* Reviews */
-      .review-card{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1.5rem;text-align:center;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.05)}
-      .review-card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,.1)}
-      .review-avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
-      .review-rating{display:inline-flex;align-items:center;gap:.25rem;background:rgba(245,158,11,.15);color:#d97706;padding:.2rem .6rem;border-radius:.75rem;font-size:.8rem;font-weight:600}
-
-      /* Floating CTA */
-      .floating-cta{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:.75rem;z-index:1080}
-      .floating-cta a{display:flex;align-items:center;gap:.5rem;border-radius:999px;padding:.6rem .9rem;background:#111827;color:#fff;text-decoration:none;font-size:.9rem}
-      .floating-cta a.whatsapp{background:#22c55e}
-      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:1070;background:#fff;border-top:1px solid #e5e7eb;padding:.5rem}
+      /* Reviews Section */
+      .review-card {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+     .review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+    .review-avatar {
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:1rem;
+}
+     .review-name {font-weight:600;margin-bottom:.25rem;}
+.review-rating {
+  display:inline-flex;
+  align-items:center;
+  gap:.25rem;
+  background:rgba(245,158,11,.15);
+  color:#d97706;
+  padding:.25rem .6rem;
+  border-radius:.75rem;
+  font-size:.85rem;
+  font-weight:600;
+}
     </style>
   </head>
   <body>
@@ -112,146 +148,395 @@
     <nav class="navbar navbar-expand-lg sticky py-3">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-          <img class="logo" src="./Images/img/brand-logo.jpg" alt="Beyond Journey" style="height:36px"/>
+          <img class="logo" src="./Images/img/brand-logo.jpg" alt="Beyond Journey"/>
+          <div class="d-none d-md-block">
+            <!-- <div style="font-weight:800">Beyond Journey</div>
+            <div style="font-size:12px;color:var(--muted)">Durga Puja Specials • 2025</div> -->
+          </div>
         </a>
-        <div class="ms-auto">
+        <div class="ms-auto d-flex gap-2 align-items-center">
+          <!-- <a class="btn btn-outline-secondary d-none d-md-inline" href="#packages">Packages</a> -->
           <a class="btn btn-brand ms-1" href="#enquiry">Enquire Now</a>
         </div>
       </div>
     </nav>
 
-    <!-- HERO Carousel -->
-    <header class="hero mb-4">
-      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
-        <div class="carousel-inner">
-          <!-- Malaysia -->
-          <div class="carousel-item active">
-            <img src="https://images.pexels.com/photos/122244/pexels-photo-122244.jpeg" alt="Malaysia"/>
-            <div class="overlay"></div>
-            <div class="container hero-content">
-                <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
-              <h1 class="fw-bold hero-caption">Malaysia • 4D/5D • From ₹17,334</h1>
-              <p class="lead hero-caption">City Tour, Genting Highlands, Batu Caves & Sunway Lagoon.</p>
-            </div>
-          </div>
-          <!-- Dubai -->
-          <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg" alt="Dubai"/>
-            <div class="overlay"></div>
-            <div class="container hero-content">
-               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
-              <h1 class="fw-bold hero-caption">Dubai • 5D • From ₹34,186</h1>
-              <p class="lead hero-caption">Dhow cruise, Burj Khalifa, Desert Safari & City highlights.</p>
-            </div>
-          </div>
-          <!-- Bali -->
-          <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/2474690/pexels-photo-2474690.jpeg" alt="Bali"/>
-            <div class="overlay"></div>
-            <div class="container hero-content">
-               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
-              <h1 class="fw-bold hero-caption">Bali • 5D • From ₹17,334</h1>
-              <p class="lead hero-caption">Kintamani, Ubud, Uluwatu Temple & Nusa Penida.</p>
-            </div>
-          </div>
-          <!-- Sri Lanka -->
-          <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/319892/pexels-photo-319892.jpeg" alt="Sri Lanka"/>
-            <div class="overlay"></div>
-            <div class="container hero-content">
-               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
-              <h1 class="fw-bold hero-caption">Sri Lanka • 4D • From ₹17,721</h1>
-              <p class="lead hero-caption">Kandy, Bentota, Colombo with river safari & culture.</p>
-            </div>
-          </div>
-          <!-- Maldives -->
-          <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/1430677/pexels-photo-1430677.jpeg" alt="Maldives"/>
-            <div class="overlay"></div>
-            <div class="container hero-content">
-               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
-              <h1 class="fw-bold hero-caption">Maldives • 5D • From ₹1,482 (per couple)</h1>
-              <p class="lead hero-caption">Beach & Water Bungalows at Cinnamon Hakuraa Huraa.</p>
+    <!-- HERO: Carousel slider with Pexels images -->
+ <!-- HERO: Carousel slider with Pexels images -->
+<header class="hero mb-4">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+    <div class="carousel-inner">
+      
+      <!-- Goa -->
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/863985/pexels-photo-863985.jpeg" class="d-block w-100" alt="Goa Beach"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Goa • 4N/5D • From ₹29,600</h1>
+              <p class="lead hero-caption">Sun, sand & nightlife — dinner cruise, North & South Goa sightseeing. Book now for travel starting 22 Sep 2025.</p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
       </div>
-    </header>
 
-    <!-- Intro -->
-    <section class="bg-soft text-center">
+      <!-- Kerala -->
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/980178/pexels-photo-980178.jpeg" class="d-block w-100" alt="Kerala Backwaters"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Kerala • 4N/5D • From ₹27,000</h1>
+              <p class="lead hero-caption">Cochin → Munnar → Thekkady → Alleppey backwaters — houseboat & nature escapes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shimla-Manali -->
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/939715/pexels-photo-939715.jpeg" class="d-block w-100" alt="Himalayas"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Shimla • Manali • 4N/5D • From ₹18,600</h1>
+              <p class="lead hero-caption">Shimla sightseeing, Kufri, Solang Valley & Rohtang pass options — perfect mountain trip.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Andaman -->
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" class="d-block w-100" alt="Andaman"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Andaman • 4N/5D • From ₹30,000</h1>
+              <p class="lead hero-caption">Port Blair, Havelock (Radhanagar Beach) & Elephant Beach — scuba & snorkeling options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nainital-Corbett -->
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" class="d-block w-100" alt="Nainital Lake"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Nainital • Corbett • 4N/5D • From ₹37,000</h1>
+              <p class="lead hero-caption">Naini Lake strolls, snow view, and Jeep safari in Jim Corbett National Park.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manali (Volvo) -->
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" class="d-block w-100" alt="Manali"/>
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="hero-badge">Durga Puja Special</span>
+              <h1 class="display-5 fw-bold hero-caption mt-3">Manali • 3N/4D + Volvo • From ₹11,100</h1>
+              <p class="lead hero-caption">Volvo overnight + hill sightseeing, Solang Valley, Kullu, Kasol & more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- floating enquiry card on hero (desktop) -->
+<!-- <div class="container d-none d-lg-block" style="position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:5;">
+  <div id="enquiry" class="inquiry-card glass p-4 shadow-soft" style="width:360px;">
+    <h5 class="mb-3 fw-bold text-center">Plan Your Durga Puja Trip</h5>
+
+    <form id="leadForm" class="needs-validation" novalidate>
+      <div class="mb-2">
+        <label class="form-label" for="name">Full Name</label>
+        <input id="name" name="name" type="text" class="form-control" placeholder="Ashish Gupta" required/>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label" for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" class="form-control" placeholder="+91 98xxxxxxx" required/>
+        <div class="invalid-feedback">Phone is required.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="packageSelect">Select Package</label>
+        <select id="packageSelect" name="package" class="form-select" required>
+          <option value="">-- Choose a package --</option>
+          <option value="Goa - 4N/5D">Goa - 4N/5D</option>
+          <option value="Kerala - 4N/5D">Kerala - 4N/5D</option>
+          <option value="Shimla - Manali - 4N/5D">Shimla - Manali - 4N/5D</option>
+          <option value="Andaman - 4N/5D">Andaman - 4N/5D</option>
+          <option value="Nainital - Corbett - 4N/5D">Nainital - Corbett - 4N/5D</option>
+          <option value="Manali Volvo - 3N/4D">Manali (Volvo) - 3N/4D</option>
+        </select>
+        <div class="invalid-feedback">Please choose a package.</div>
+      </div>
+
+      <div class="d-grid">
+        <button class="btn btn-brand btn-lg" type="submit">Submit Enquiry</button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+    <!-- controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+
+
+    <!-- USPs -->
+    <section class="bg-soft">
       <div class="container">
-        <h2 class="section-title">This Durga Puja, Go Global with BeyondJourney.in</h2>
-        <p class="section-lead">Break the routine and celebrate the spirit of Durga Puja with a dream international vacation curated just for you.</p>
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-shield-check display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Trusted by 50k+</h6>
+              <div class="text-secondary small">happy travellers</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-cash-coin display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Best Price</h6>
+              <div class="text-secondary small">guaranteed value</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-headset display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">24×7 Support</h6>
+              <div class="text-secondary small">on-trip assistance</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-clipboard2-check display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Visa Help</h6>
+              <div class="text-secondary small">end-to-end guidance</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Packages -->
     <section id="packages">
       <div class="container">
-        <h2 class="section-title mb-1">Explore These Trending International Spots</h2>
-        <p class="section-lead">Limited period festive offers. Fully customizable packages.</p>
-        <div class="row g-4 mt-3">
-          <!-- Malaysia Budget -->
-          <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+          <div>
+            <h2 class="section-title mb-1">Durga Puja Special Packages — India</h2>
+            <p class="section-lead">Limited period offers. Packages are fully customizable — add nights, swap hotels, include activities.</p>
+          </div>
+          <a href="#enquiry" class="btn btn-outline-primary d-none d-md-inline-flex">Enquire</a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Goa -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/398154/pexels-photo-398154.jpeg" alt="Malaysia Budget"/>
-              <div class="p-3"><h5>Malaysia Budget (4D)</h5><p class="text-secondary small">KL • Genting • Sunway Lagoon</p><div class="d-flex justify-content-between"><span class="package-price">₹17,334/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Malaysia Budget 4D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg" alt="Goa"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 4N/5D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                </div>
+                <h5 class="mb-1">Goa</h5>
+                <div class="text-secondary small mb-2">North Goa • South Goa • Dinner Cruise</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 3★/Deluxe</div>
+                  <div><i class="bi bi-car-front"></i> Sedan transfers</div>
+                  <div><i class="bi bi-ticket-perforated"></i> Activities (optional)</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹29,600/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Goa - 4N/5D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Calangute, Baga, Anjuna, Dona Paula, Mangeshi Temple, Dinner Cruise (Panjim).
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Malaysia Premium -->
-          <div class="col-12 col-md-6 col-lg-4">
+
+          <!-- Kerala -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/394355/pexels-photo-394355.jpeg" alt="Malaysia Premium"/>
-              <div class="p-3"><h5>Malaysia Premium (5D)</h5><p class="text-secondary small">KL • Genting • Batu Caves • Sunway</p><div class="d-flex justify-content-between"><span class="package-price">₹18,201/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Malaysia Premium 5D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg" alt="Kerala"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 4N/5D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                </div>
+                <h5 class="mb-1">Kerala</h5>
+                <div class="text-secondary small mb-2">Cochin • Munnar • Thekkady • Alleppey</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 3★/Premium</div>
+                  <div><i class="bi bi-car-front"></i> Sedan transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast (hotel)</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹34,500/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Kerala - 4N/5D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Munnar tea gardens, Eravikulam NP, Periyar boating, Alleppey houseboat.
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Dubai -->
-          <div class="col-12 col-md-6 col-lg-4">
+
+          <!-- Shimla-Manali -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/442579/pexels-photo-442579.jpeg" alt="Dubai"/>
-              <div class="p-3"><h5>Dubai (5D)</h5><p class="text-secondary small">Burj Khalifa • Desert Safari • Dhow</p><div class="d-flex justify-content-between"><span class="package-price">₹34,186/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Dubai 5D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" alt="Shimla Manali"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 4N/5D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
+                </div>
+                <h5 class="mb-1">Shimla & Manali</h5>
+                <div class="text-secondary small mb-2">Shimla • Kufri • Kullu • Manali</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 3★/4★</div>
+                  <div><i class="bi bi-car-front"></i> Sedan transfers</div>
+                  <div><i class="bi bi-map"></i> Local sightseeing</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹24,400/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Shimla-Manali - 4N/5D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Mall Road, Jakhu Temple, Kufri, Solang Valley (activities extra), Rohtang options.
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Bali -->
-          <div class="col-12 col-md-6 col-lg-4">
+
+          <!-- Andaman -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/695779/pexels-photo-695779.jpeg" alt="Bali"/>
-              <div class="p-3"><h5>Bali (5D)</h5><p class="text-secondary small">Kintamani • Ubud • Uluwatu • Nusa</p><div class="d-flex justify-content-between"><span class="package-price">₹17,334/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Bali 5D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" alt="Andaman"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 4N/5D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                </div>
+                <h5 class="mb-1">Andaman</h5>
+                <div class="text-secondary small mb-2">Port Blair • Havelock (Swaraj Dweep)</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 3★/Deluxe</div>
+                  <div><i class="bi bi-boat"></i> Ferry transfers</div>
+                  <div><i class="bi bi-ticket-perforated"></i> Snorkeling / Scuba options</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹30,000/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Andaman - 4N/5D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Cellular Jail light & sound, Radhanagar Beach, Elephant Beach, snorkeling & optional diving.
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Sri Lanka Budget -->
-          <div class="col-12 col-md-6 col-lg-4">
+
+          <!-- Nainital-Corbett -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/739409/pexels-photo-739409.jpeg" alt="Sri Lanka Budget"/>
-              <div class="p-3"><h5>Sri Lanka Budget (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹17,721/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Budget 4D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" alt="Nainital"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 4N/5D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                </div>
+                <h5 class="mb-1">Nainital & Corbett</h5>
+                <div class="text-secondary small mb-2">Nainital • Jim Corbett</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 3★/Premium</div>
+                  <div><i class="bi bi-car-front"></i> Sedan transfers</div>
+                  <div><i class="bi bi-ticket-perforated"></i> Jeep Safari (Corbett)</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹37,000/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Nainital-Corbett - 4N/5D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Naini Lake boating, Snow View point, Corbett jeep safari & nature activities.
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Sri Lanka Superior -->
-          <div class="col-12 col-md-6 col-lg-4">
+
+          <!-- Manali (Volvo) -->
+          <div class="col-md-6 col-lg-4">
             <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/3918367/pexels-photo-3918367.jpeg" alt="Sri Lanka Superior"/>
-              <div class="p-3"><h5>Sri Lanka Superior (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹21,780/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Superior 4D">Enquire</button></div></div>
-            </div>
-          </div>
-          <!-- Sri Lanka Premium -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/4540520/pexels-photo-4540520.jpeg" alt="Sri Lanka Premium"/>
-              <div class="p-3"><h5>Sri Lanka Premium (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹23,463/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Premium 4D">Enquire</button></div></div>
-            </div>
-          </div>
-          <!-- Maldives -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="package-card h-100">
-              <img class="package-img" src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg" alt="Maldives"/>
-              <div class="p-3"><h5>Maldives (5D)</h5><p class="text-secondary small">Beach & Water Bungalows</p><div class="d-flex justify-content-between"><span class="package-price">₹1,482/- per couple</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Maldives 5D">Enquire</button></div></div>
+              <img class="package-img w-100" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600" alt="Manali Volvo"/>
+              <div class="p-3 p-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip"><i class="bi bi-calendar2-week"></i> 3N/4D</span>
+                  <span class="rating"><i class="bi bi-star-fill"></i> 4.6</span>
+                </div>
+                <h5 class="mb-1">Manali (Volvo)</h5>
+                <div class="text-secondary small mb-2">Volvo overnight + Manali local sightseeing</div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-bus-front"></i> Volvo + Alto</div>
+                  <div><i class="bi bi-house-door"></i> 3★ hotels</div>
+                  <div><i class="bi bi-map"></i> Solang Valley & Kullu</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price package-price h5 mb-0">₹11,100/-</div>
+                  <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Manali (Volvo) - 3N/4D">Enquire</button>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                  <strong>Highlights</strong>: Volvo overnight journey, Hadimba Temple, Solang Valley activities (extra).
+                </div>
+              </div>
             </div>
           </div>
 
@@ -259,118 +544,157 @@
       </div>
     </section>
 
-    <!-- Dubai Itinerary -->
+    <!-- Sample Itinerary (Goa shown detailed; others summarized) -->
     <section id="itinerary" class="bg-soft">
       <div class="container">
-        <div class="row g-4 align-items-start">
+        <div class="row g-4">
           <div class="col-lg-5">
-            <h2 class="section-title">Sample Itinerary — Dubai (5D)</h2>
+            <h2 class="section-title mb-3">Sample Itinerary — Goa (4N/5D)</h2>
             <div class="timeline mt-4">
-              <div class="timeline-item"><h6>Day 1: Arrival & Dhow Cruise</h6><p class="text-secondary">Evening Marina Dhow cruise with dinner.</p></div>
-              <div class="timeline-item"><h6>Day 2: Burj Khalifa</h6><p class="text-secondary">City tour + Burj Khalifa 124th floor entry.</p></div>
-              <div class="timeline-item"><h6>Day 3: Desert Safari</h6><p class="text-secondary">Dune bashing, camel ride, BBQ dinner.</p></div>
-              <div class="timeline-item"><h6>Day 4: City Tour</h6><p class="text-secondary">Souks, Jumeirah, Atlantis, Dubai Marina.</p></div>
-              <div class="timeline-item"><h6>Day 5: Departure</h6><p class="text-secondary">Breakfast & airport transfer.</p></div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 1: Goa Arrival</h6>
+                <div class="text-secondary">Arrival, transfer to hotel, relax. Overnight stay.</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 2: North Goa</h6>
+                <div class="text-secondary">Calangute, Baga, Anjuna, Fort Aguada, beaches & optional dolphin trip.</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 3: South Goa</h6>
+                <div class="text-secondary">Colva, Mangeshi Temple, Dona Paula, Panjim city & boat cruise (optional).</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 4: Leisure + Dinner Cruise</h6>
+                <div class="text-secondary">Beach time and evening dinner cruise (Panjim) with entertainment.</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 5: Departure</h6>
+                <div class="text-secondary">Breakfast & transfer to airport / railway station.</div>
+              </div>
             </div>
+
+            <a href="#packages" class="btn btn-brand mt-3">Explore other packages</a>
           </div>
+
           <div class="col-lg-7">
             <div class="ratio ratio-16x9 rounded-4 shadow-soft overflow-hidden">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/ahy5o5nT4oI?si=BraEyYt4cgatJKcS" title="Dubai Tour" loading="lazy"></iframe>
+              <iframe title="Goa Sample" loading="lazy" src="https://www.youtube.com/embed/F3YGYr37QFI?si=6tkQ_o9uCWqVXaP6"></iframe>
+            </div>
+
+            <div class="row g-3 mt-3">
+              <div class="col-4">
+                <img class="w-100 rounded-3" src="https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg" alt="beach"/>
+              </div>
+              <div class="col-4">
+                <img class="w-100 rounded-3" src="https://images.pexels.com/photos/4429333/pexels-photo-4429333.jpeg" alt="backwater"/>
+              </div>
+              <div class="col-4">
+                <img class="w-100 rounded-3" src="https://images.pexels.com/photos/4428286/pexels-photo-4428286.jpeg" alt="mountain"/>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Reviews -->
-    <section id="review" class="bg-soft">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="section-title">Loved by Travellers</h2>
-          <p class="section-lead">Real experiences shared by our happy guests.</p>
-        </div>
-        <div class="row g-4">
-               <!-- Review 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="review-card h-100">
-              <img class="review-avatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Ritika"/>
-              <h6 class="fw-bold">Ritika <span class="review-rating"><i class="bi bi-star-fill"></i> 5.0</span></h6>
-              <p class="text-secondary mt-2">“Perfectly planned international trip. Hotels and transfers were excellent. Highly recommend!”</p>
-            </div>
-          </div>
-          <!-- Review 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="review-card h-100">
-              <img class="review-avatar" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Rohit"/>
-              <h6 class="fw-bold">Rohit <span class="review-rating"><i class="bi bi-star-fill"></i> 4.8</span></h6>
-              <p class="text-secondary mt-2">“Dubai package was superb. Support team stayed connected on WhatsApp throughout.”</p>
-            </div>
-          </div>
-          <!-- Review 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="review-card h-100">
-              <img class="review-avatar" src="https://images.pexels.com/photos/614809/pexels-photo-614809.jpeg" alt="Manish"/>
-              <h6 class="fw-bold">Manish <span class="review-rating"><i class="bi bi-star-fill"></i> 4.9</span></h6>
-              <p class="text-secondary mt-2">“Visa assistance and customization were smooth. Great value for money!”</p>
-            </div>
-          </div>
+
+
+   <!-- Reviews Grid -->
+<section id="review" class="bg-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title mb-1">Loved by Travellers</h2>
+      <p class="section-lead">Real experiences shared by our happy guests.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Review 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="review-card text-center h-100 shadow-soft">
+          <img class="review-avatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Ritika"/>
+          <h6 class="review-name">Ritika 
+            <span class="review-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+          </h6>
+          <p class="text-secondary mt-2">“Perfectly planned holiday. Great hotels and punctual transfers. Highly recommend!”</p>
         </div>
       </div>
-    </section>
 
-    <!-- Why Travel -->
-    <section class="bg-white">
-      <div class="container text-center">
-        <h2 class="section-title">Why Travel with Beyond Journey?</h2>
-        <ul class="list-unstyled mt-3">
-          <li>🌟 Handpicked stays & curated itineraries</li>
-          <li>✈️ End-to-end travel support – flights, visas, hotels</li>
-          <li>🤝 Trusted by 1000+ happy travelers</li>
-        </ul>
+      <!-- Review 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="review-card text-center h-100 shadow-soft">
+          <img class="review-avatar" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Rohit"/>
+          <h6 class="review-name">Rohit 
+            <span class="review-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+          </h6>
+          <p class="text-secondary mt-2">“Self-drive garden route was a dream. Support team was responsive on WhatsApp throughout.”</p>
+        </div>
       </div>
-    </section>
 
-    <!-- Floating CTA (Desktop) -->
+      <!-- Review 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="review-card text-center h-100 shadow-soft">
+          <img class="review-avatar" src="https://images.pexels.com/photos/614809/pexels-photo-614809.jpeg" alt="Manish"/>
+          <h6 class="review-name">Manish 
+            <span class="review-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+          </h6>
+          <p class="text-secondary mt-2">“Visa assistance was smooth. Customizations handled professionally. Value for money!”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Floating CTA & Sticky Mobile CTA -->
     <div class="floating-cta d-none d-md-flex">
-      <a class="whatsapp" href="https://wa.me/+919311511338" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      <a class="whatsapp" href="https://wa.me/+919311511338" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
       <a href="#enquiry" class="btn btn-brand"><i class="bi bi-send"></i> Enquire</a>
     </div>
 
-    <!-- Sticky CTA (Mobile) -->
-    <div class="sticky-cta d-md-none">
-      <div class="container d-flex gap-2">
-        <a class="btn btn-success flex-fill" href="https://wa.me/+919311511338" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-        <a class="btn btn-brand flex-fill" href="#enquiry"><i class="bi bi-send"></i> Enquire</a>
+    <div class="sticky-cta py-2 d-md-none">
+      <div class="container">
+        <div class="d-flex gap-2">
+          <a class="btn btn-success flex-fill" href="https://wa.me/+919311511338" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-brand flex-fill" href="#enquiry"><i class="bi bi-send"></i> Enquire</a>
+        </div>
       </div>
     </div>
 
-    <!-- Enquiry Modal -->
-    <div class="modal fade" id="enquiryModal" tabindex="-1">
+    <!-- Enquiry Modal (single used by package cards too) -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded-4 shadow">
           <div class="modal-header">
-            <h5 class="modal-title w-100 fw-bold text-center">Plan Your Durga Puja Trip</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <h5 class="modal-title w-100 fw-bold text-center" id="enquiryModalLabel">Plan Your Durga Puja Trip</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+
           <div class="modal-body">
             <form id="modalLeadForm" class="needs-validation" novalidate>
-              <div class="mb-3">
-                <label class="form-label fw-bold">Full Name</label>
-                <input type="text" class="form-control" id="modal-name" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label fw-bold">Phone</label>
-                <input type="tel" class="form-control" id="modal-phone" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label fw-bold">Selected Package</label>
-                <input type="text" class="form-control" id="modal-package" readonly>
-              </div>
-              <button class="btn btn-brand w-100">Submit Enquiry</button>
-              <div class="small text-secondary text-center mt-2">
-                By continuing you agree to our 
-                <a href="https://www.beyondjourney.in/TermsAndConditions.html">T&Cs</a> & 
-                <a href="https://www.beyondjourney.in/PrivacyPolicy.html">Privacy Policy</a>.
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label fw-bold" for="modal-name">Full Name</label>
+                  <input id="modal-name" name="name" type="text" class="form-control" placeholder="Ashish Gupta" required />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-bold" for="modal-phone">Phone</label>
+                  <input id="modal-phone" name="phone" type="tel" class="form-control" placeholder="+91 98xxxxxxx" required />
+                  <div class="invalid-feedback">Phone is required.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-bold" for="modal-package">Selected Package</label>
+                  <input id="modal-package" name="package" type="text" class="form-control" readonly />
+                </div>
+
+                <div class="col-12 d-grid">
+                  <button class="btn btn-brand btn-lg" type="submit">Submit Enquiry</button>
+                </div>
+
+                <div class="col-12 small text-secondary text-center">
+                  By continuing you agree to our <a href="https://www.beyondjourney.in/TermsAndConditions.html">T&Cs</a> & <a href="https://www.beyondjourney.in/PrivacyPolicy.html">Privacy Policy</a>.
+                </div>
               </div>
             </form>
           </div>
@@ -378,27 +702,73 @@
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-      // Prefill modal with package name
+      // Footer year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // Lead form validation and demo submission (main form in hero)
+      (function(){
+        const leadForm = document.getElementById("leadForm");
+        leadForm.addEventListener("submit", function(e){
+          e.preventDefault();
+          if(!leadForm.checkValidity()){
+            leadForm.classList.add("was-validated");
+            return;
+          }
+          const data = Object.fromEntries(new FormData(leadForm).entries());
+          // demo: show alert (replace with your AJAX / backend)
+          alert("Thanks! Our expert will reach out.\\n\\n" + JSON.stringify(data, null, 2));
+          leadForm.reset();
+          leadForm.classList.remove("was-validated");
+        });
+
+        // Modal form
+        const modalForm = document.getElementById("modalLeadForm");
+        modalForm.addEventListener("submit", function(e){
+          e.preventDefault();
+          if(!modalForm.checkValidity()){
+            modalForm.classList.add("was-validated");
+            return;
+          }
+          const data = Object.fromEntries(new FormData(modalForm).entries());
+          alert("Enquiry received. We will contact you shortly.\\n\\n" + JSON.stringify(data, null, 2));
+          modalForm.reset();
+          modalForm.classList.remove("was-validated");
+          const enquiryModal = bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
+          if(enquiryModal) enquiryModal.hide();
+        });
+      })();
+
+      // When Enquire buttons are clicked, copy package name into modal input
       document.querySelectorAll('[data-bs-target="#enquiryModal"]').forEach(btn=>{
-        btn.addEventListener('click',()=>{
-          document.getElementById('modal-package').value = btn.getAttribute('data-package');
+        btn.addEventListener('click', (e)=>{
+          const pkg = btn.getAttribute('data-package') || '';
+          const modalPkg = document.getElementById('modal-package');
+          if(modalPkg) modalPkg.value = pkg;
         });
       });
 
-      // Simple form handler
-      const modalForm=document.getElementById("modalLeadForm");
-      modalForm.addEventListener("submit",function(e){
-        e.preventDefault();
-        if(!modalForm.checkValidity()){modalForm.classList.add("was-validated");return;}
-        alert("Enquiry received. We will contact you shortly!");
-        modalForm.reset();
-        const modal=bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
-        if(modal) modal.hide();
+      // Also enable clicking package card Enquire to open modal with package prefilled:
+      document.querySelectorAll('.package-card button[data-bs-target="#enquiryModal"]').forEach(b=>{
+        b.addEventListener('click', ()=>{ /* handled above */ });
       });
+
+      // Pause reviews when modal open
+      const reviewCarouselEl = document.querySelector("#reviewCarousel");
+      const reviewCarousel = bootstrap.Carousel.getOrCreateInstance(reviewCarouselEl);
+      const enquiryModalEl = document.getElementById("enquiryModal");
+      if(enquiryModalEl){
+        enquiryModalEl.addEventListener("show.bs.modal", ()=>{ reviewCarousel.pause(); });
+        enquiryModalEl.addEventListener("hidden.bs.modal", ()=>{ reviewCarousel.cycle(); });
+      }
+
+      // Fix: ensure single instance of hero carousel exists
+      const hero = bootstrap.Carousel.getOrCreateInstance(document.getElementById('heroCarousel'));
+
+       document.getElementById("yr").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
-
