@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Durga Puja Special International | Beyond Journey</title>
+    <meta
+      name="description"
+      content="Durga Puja International holiday specials — Malaysia, Dubai, Bali, Sri Lanka, Maldives & more. Curated itineraries, best price, 24x7 support from Beyond Journey."
+    />
+    <meta name="author" content="Beyond Journey" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --brand:#f59e0b;
+        --brand-dark:#d97706;
+        --ink:#0f172a;
+        --muted:#6b7280;
+        --soft:#f1f5f9;
+      }
+      html,body {
+        font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif;
+        color:var(--ink);
+        background:#fff;
+        scroll-behavior:smooth
+      }
+      h1,h2,h3,h4,h5,h6 {
+        font-family:"Playfair Display",serif;
+        font-weight:600;
+      }
+      .btn-brand{background:var(--brand);border-color:var(--brand);color:#fff}
+      .btn-brand:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+      .bg-soft{background:var(--soft)}
+      .navbar.sticky{position:sticky;top:0;z-index:1020;background:rgba(255,255,255,.95);border-bottom:1px solid #eef2f7}
+
+      /* Hero */
+      .hero {position: relative;min-height: 70vh;overflow: hidden;}
+      .hero .carousel-item img {object-fit: cover;height: 70vh;width: 100%;}
+      .hero .overlay {position: absolute;top:0;left:0;right:0;bottom:0;background: rgba(0,0,0,0.40);z-index:1;}
+      .hero-content {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;color:#fff;width:90%;}
+      .hero-badge {display:inline-flex;gap:.5rem;align-items:center;background:rgba(255,255,255,.15);border-radius:999px;padding:.3rem .8rem;font-size:.85rem;font-weight:600;color:#fff;}
+      .hero-caption {color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.6);}
+   .hero-badge.teal {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #fff;
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.6);
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-badge.teal i {
+  font-size: 1.1rem;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+      @media(max-width:768px){
+        .hero .carousel-item img{height:55vh;}
+        .hero-content h1{font-size:1.5rem;}
+        .hero-content p{font-size:.9rem;}
+      }
+
+      section{padding:60px 0}
+      @media(min-width:992px){section{padding:88px 0}}
+      .section-title{font-weight:600;letter-spacing:-.01em}
+      .section-lead{color:var(--muted)}
+      .package-card{border:1px solid #e5e7eb;border-radius:1.25rem;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;background:#fff}
+      .package-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(2,8,20,.08)}
+      .package-img{aspect-ratio:16/10;object-fit:cover;width:100%}
+      .package-price{font-weight:800;letter-spacing:-.02em}
+
+      /* Reviews */
+      .review-card{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1.5rem;text-align:center;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+      .review-card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,.1)}
+      .review-avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+      .review-rating{display:inline-flex;align-items:center;gap:.25rem;background:rgba(245,158,11,.15);color:#d97706;padding:.2rem .6rem;border-radius:.75rem;font-size:.8rem;font-weight:600}
+
+      /* Floating CTA */
+      .floating-cta{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:.75rem;z-index:1080}
+      .floating-cta a{display:flex;align-items:center;gap:.5rem;border-radius:999px;padding:.6rem .9rem;background:#111827;color:#fff;text-decoration:none;font-size:.9rem}
+      .floating-cta a.whatsapp{background:#22c55e}
+      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:1070;background:#fff;border-top:1px solid #e5e7eb;padding:.5rem}
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img class="logo" src="./Images/img/brand-logo.jpg" alt="Beyond Journey" style="height:36px"/>
+        </a>
+        <div class="ms-auto">
+          <a class="btn btn-brand ms-1" href="#enquiry">Enquire Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO Carousel -->
+    <header class="hero mb-4">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+        <div class="carousel-inner">
+          <!-- Malaysia -->
+          <div class="carousel-item active">
+            <img src="https://images.pexels.com/photos/122244/pexels-photo-122244.jpeg" alt="Malaysia"/>
+            <div class="overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
+              <h1 class="fw-bold hero-caption">Malaysia • 4D/5D • From ₹17,334</h1>
+              <p class="lead hero-caption">City Tour, Genting Highlands, Batu Caves & Sunway Lagoon.</p>
+            </div>
+          </div>
+          <!-- Dubai -->
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg" alt="Dubai"/>
+            <div class="overlay"></div>
+            <div class="container hero-content">
+               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
+              <h1 class="fw-bold hero-caption">Dubai • 5D • From ₹34,186</h1>
+              <p class="lead hero-caption">Dhow cruise, Burj Khalifa, Desert Safari & City highlights.</p>
+            </div>
+          </div>
+          <!-- Bali -->
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/2474690/pexels-photo-2474690.jpeg" alt="Bali"/>
+            <div class="overlay"></div>
+            <div class="container hero-content">
+               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
+              <h1 class="fw-bold hero-caption">Bali • 5D • From ₹17,334</h1>
+              <p class="lead hero-caption">Kintamani, Ubud, Uluwatu Temple & Nusa Penida.</p>
+            </div>
+          </div>
+          <!-- Sri Lanka -->
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/319892/pexels-photo-319892.jpeg" alt="Sri Lanka"/>
+            <div class="overlay"></div>
+            <div class="container hero-content">
+               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
+              <h1 class="fw-bold hero-caption">Sri Lanka • 4D • From ₹17,721</h1>
+              <p class="lead hero-caption">Kandy, Bentota, Colombo with river safari & culture.</p>
+            </div>
+          </div>
+          <!-- Maldives -->
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/1430677/pexels-photo-1430677.jpeg" alt="Maldives"/>
+            <div class="overlay"></div>
+            <div class="container hero-content">
+               <span class="hero-badge teal"><i class="bi bi-stars"></i>Durga Puja Special</span>
+              <h1 class="fw-bold hero-caption">Maldives • 5D • From ₹1,482 (per couple)</h1>
+              <p class="lead hero-caption">Beach & Water Bungalows at Cinnamon Hakuraa Huraa.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="bg-soft text-center">
+      <div class="container">
+        <h2 class="section-title">This Durga Puja, Go Global with BeyondJourney.in</h2>
+        <p class="section-lead">Break the routine and celebrate the spirit of Durga Puja with a dream international vacation curated just for you.</p>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages">
+      <div class="container">
+        <h2 class="section-title mb-1">Explore These Trending International Spots</h2>
+        <p class="section-lead">Limited period festive offers. Fully customizable packages.</p>
+        <div class="row g-4 mt-3">
+          <!-- Malaysia Budget -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/398154/pexels-photo-398154.jpeg" alt="Malaysia Budget"/>
+              <div class="p-3"><h5>Malaysia Budget (4D)</h5><p class="text-secondary small">KL • Genting • Sunway Lagoon</p><div class="d-flex justify-content-between"><span class="package-price">₹17,334/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Malaysia Budget 4D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Malaysia Premium -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/394355/pexels-photo-394355.jpeg" alt="Malaysia Premium"/>
+              <div class="p-3"><h5>Malaysia Premium (5D)</h5><p class="text-secondary small">KL • Genting • Batu Caves • Sunway</p><div class="d-flex justify-content-between"><span class="package-price">₹18,201/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Malaysia Premium 5D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Dubai -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/442579/pexels-photo-442579.jpeg" alt="Dubai"/>
+              <div class="p-3"><h5>Dubai (5D)</h5><p class="text-secondary small">Burj Khalifa • Desert Safari • Dhow</p><div class="d-flex justify-content-between"><span class="package-price">₹34,186/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Dubai 5D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Bali -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/695779/pexels-photo-695779.jpeg" alt="Bali"/>
+              <div class="p-3"><h5>Bali (5D)</h5><p class="text-secondary small">Kintamani • Ubud • Uluwatu • Nusa</p><div class="d-flex justify-content-between"><span class="package-price">₹17,334/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Bali 5D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Sri Lanka Budget -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/739409/pexels-photo-739409.jpeg" alt="Sri Lanka Budget"/>
+              <div class="p-3"><h5>Sri Lanka Budget (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹17,721/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Budget 4D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Sri Lanka Superior -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/3918367/pexels-photo-3918367.jpeg" alt="Sri Lanka Superior"/>
+              <div class="p-3"><h5>Sri Lanka Superior (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹21,780/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Superior 4D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Sri Lanka Premium -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/4540520/pexels-photo-4540520.jpeg" alt="Sri Lanka Premium"/>
+              <div class="p-3"><h5>Sri Lanka Premium (4D)</h5><p class="text-secondary small">Kandy • Bentota • Colombo</p><div class="d-flex justify-content-between"><span class="package-price">₹23,463/-</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Sri Lanka Premium 4D">Enquire</button></div></div>
+            </div>
+          </div>
+          <!-- Maldives -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img class="package-img" src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg" alt="Maldives"/>
+              <div class="p-3"><h5>Maldives (5D)</h5><p class="text-secondary small">Beach & Water Bungalows</p><div class="d-flex justify-content-between"><span class="package-price">₹1,482/- per couple</span><button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-package="Maldives 5D">Enquire</button></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Dubai Itinerary -->
+    <section id="itinerary" class="bg-soft">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <h2 class="section-title">Sample Itinerary — Dubai (5D)</h2>
+            <div class="timeline mt-4">
+              <div class="timeline-item"><h6>Day 1: Arrival & Dhow Cruise</h6><p class="text-secondary">Evening Marina Dhow cruise with dinner.</p></div>
+              <div class="timeline-item"><h6>Day 2: Burj Khalifa</h6><p class="text-secondary">City tour + Burj Khalifa 124th floor entry.</p></div>
+              <div class="timeline-item"><h6>Day 3: Desert Safari</h6><p class="text-secondary">Dune bashing, camel ride, BBQ dinner.</p></div>
+              <div class="timeline-item"><h6>Day 4: City Tour</h6><p class="text-secondary">Souks, Jumeirah, Atlantis, Dubai Marina.</p></div>
+              <div class="timeline-item"><h6>Day 5: Departure</h6><p class="text-secondary">Breakfast & airport transfer.</p></div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="ratio ratio-16x9 rounded-4 shadow-soft overflow-hidden">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ahy5o5nT4oI?si=BraEyYt4cgatJKcS" title="Dubai Tour" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="review" class="bg-soft">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Loved by Travellers</h2>
+          <p class="section-lead">Real experiences shared by our happy guests.</p>
+        </div>
+        <div class="row g-4">
+               <!-- Review 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="review-card h-100">
+              <img class="review-avatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Ritika"/>
+              <h6 class="fw-bold">Ritika <span class="review-rating"><i class="bi bi-star-fill"></i> 5.0</span></h6>
+              <p class="text-secondary mt-2">“Perfectly planned international trip. Hotels and transfers were excellent. Highly recommend!”</p>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="review-card h-100">
+              <img class="review-avatar" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Rohit"/>
+              <h6 class="fw-bold">Rohit <span class="review-rating"><i class="bi bi-star-fill"></i> 4.8</span></h6>
+              <p class="text-secondary mt-2">“Dubai package was superb. Support team stayed connected on WhatsApp throughout.”</p>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="review-card h-100">
+              <img class="review-avatar" src="https://images.pexels.com/photos/614809/pexels-photo-614809.jpeg" alt="Manish"/>
+              <h6 class="fw-bold">Manish <span class="review-rating"><i class="bi bi-star-fill"></i> 4.9</span></h6>
+              <p class="text-secondary mt-2">“Visa assistance and customization were smooth. Great value for money!”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Travel -->
+    <section class="bg-white">
+      <div class="container text-center">
+        <h2 class="section-title">Why Travel with Beyond Journey?</h2>
+        <ul class="list-unstyled mt-3">
+          <li>🌟 Handpicked stays & curated itineraries</li>
+          <li>✈️ End-to-end travel support – flights, visas, hotels</li>
+          <li>🤝 Trusted by 1000+ happy travelers</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Floating CTA (Desktop) -->
+    <div class="floating-cta d-none d-md-flex">
+      <a class="whatsapp" href="https://wa.me/+919311511338" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      <a href="#enquiry" class="btn btn-brand"><i class="bi bi-send"></i> Enquire</a>
+    </div>
+
+    <!-- Sticky CTA (Mobile) -->
+    <div class="sticky-cta d-md-none">
+      <div class="container d-flex gap-2">
+        <a class="btn btn-success flex-fill" href="https://wa.me/+919311511338" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        <a class="btn btn-brand flex-fill" href="#enquiry"><i class="bi bi-send"></i> Enquire</a>
+      </div>
+    </div>
+
+    <!-- Enquiry Modal -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 fw-bold text-center">Plan Your Durga Puja Trip</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="modalLeadForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Full Name</label>
+                <input type="text" class="form-control" id="modal-name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Phone</label>
+                <input type="tel" class="form-control" id="modal-phone" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Selected Package</label>
+                <input type="text" class="form-control" id="modal-package" readonly>
+              </div>
+              <button class="btn btn-brand w-100">Submit Enquiry</button>
+              <div class="small text-secondary text-center mt-2">
+                By continuing you agree to our 
+                <a href="https://www.beyondjourney.in/TermsAndConditions.html">T&Cs</a> & 
+                <a href="https://www.beyondjourney.in/PrivacyPolicy.html">Privacy Policy</a>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Prefill modal with package name
+      document.querySelectorAll('[data-bs-target="#enquiryModal"]').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          document.getElementById('modal-package').value = btn.getAttribute('data-package');
+        });
+      });
+
+      // Simple form handler
+      const modalForm=document.getElementById("modalLeadForm");
+      modalForm.addEventListener("submit",function(e){
+        e.preventDefault();
+        if(!modalForm.checkValidity()){modalForm.classList.add("was-validated");return;}
+        alert("Enquiry received. We will contact you shortly!");
+        modalForm.reset();
+        const modal=bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
+        if(modal) modal.hide();
+      });
+    </script>
+  </body>
+</html>
+
